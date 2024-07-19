@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex,nofollow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Happy Room</title>
+    <link rel="stylesheet" href="style/style.css?v=1">
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <script src="UnityProgress.js?v=1"></script>
+	
+  </head>
+  <body class="template">
+    <div class="template-wrap clear">
+      <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="506px" width="900px"></canvas>
+      <br>
+      
+    </div>
+    <script type='text/javascript'>
+  var Module = {
+    TOTAL_MEMORY: 268435456,
+    errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+    compatibilitycheck: null,
+    backgroundColor: "#000000",
+    splashStyle: "Light",
+    dataUrl: "build_web.data",
+    codeUrl: "build_web.js",
+    asmUrl: "build_web.asm.js",
+    memUrl: "build_web.mem",
+  };
+</script>
+
+<script src="UnityLoader.js?v=1"></script>
+  </body>
+</html>
