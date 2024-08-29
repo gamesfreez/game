@@ -1,0 +1,52 @@
+{
+	"version":"LAYAHIERARCHY:02",
+	"data":{
+		"type":"MeshSprite3D",
+		"instanceID":305,
+		"props":{
+			"name":"txtTask",
+			"active":true,
+			"isStatic":false,
+			"layer":0,
+			"position":[
+				-1.92,
+				10.37,
+				0
+			],
+			"rotation":[
+				0.3190294,
+				0.1439807,
+				-0.04910336,
+				0.9354564
+			],
+			"scale":[
+				2.2,
+				2.2,
+				2.2
+			],
+			"meshPath":"Library/unity default resources-Quad.lm",
+			"enableRender":true,
+			"materials":[
+				{
+					"path":"Assets/Textures/UI/Materials/txtTask.lmat"
+				}
+			]
+		},
+		"components":[
+			{
+				"type":"PhysicsCollider",
+				"restitution":0,
+				"friction":0.5,
+				"rollingFriction":0,
+				"shapes":[
+					{
+						"type":"MeshColliderShape",
+						"mesh":"Library/unity default resources-Quad.lm"
+					}
+				],
+				"isTrigger":false
+			}
+		],
+		"child":[]
+	}
+}
