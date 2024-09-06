@@ -1,4 +1,12 @@
-
+function pokiEnsureStop(){PokiSDK.gameplayStop();}
+function pokiEnsureStart(){PokiSDK.gameplayStart();}
+function setPokiInited(){PokiSDK.gameLoadingStart();sdkInited=true;}
+function initPokiSdk(){PokiSDK.init().then(()=>{setPokiInited();}).catch(()=>{setPokiInited();});}
+function gameLoadingFinished(){PokiSDK.gameLoadingFinished();}
+function initSdk(){initPokiSdk();}
+function startGameSdk(){PokiSDK.commercialBreak().then(()=>{startGame();}).catch((err)=>{});}
+function adInterstitialShow(){PokiSDK.commercialBreak().then(()=>{Module.ccall("ad_interstitial_on_showed","v",["number"],[1]);});}
+function adRewardedShow(){PokiSDK.rewardedBreak().then((success)=>{Module.ccall("ad_rewarded_on_showed","v",["number"],[success?1:0]);if(success){Module.ccall("ad_rewarded_on_rewarded","v");}});}
 async function getShareUrl(str){return new Promise((resolve,reject)=>{const params={l:str,}
 PokiSDK.shareableURL(params).then(url=>{resolve(url);});});}
 var Audio={};Audio.ctx=null;Audio.timer=null;Audio.allowed=false;Audio.paused=false;Audio.postInit=[];Audio.init=function(samples,sampleRate){Audio.samples=samples;Audio.sampleRate=sampleRate;Audio.bufferingDelay=50/1000;Audio.bufferDurationSecs=Audio.samples/Audio.sampleRate;Audio.nextPlayTime=0;Audio.numSimultaneouslyQueuedBuffers=5;Audio.paused=false;Audio.resume();}
